@@ -13,12 +13,12 @@ namespace TP2_Punto3_2
         public Lavadora()
         {
         }
-        public Lavadora(decimal precio, int peso)
+        public Lavadora(double precio, int peso)
         {
             PrecioBase = precio;
             Peso = peso;
         }
-        public Lavadora(int precio, string color, char consumo, int peso, int carga)
+        public Lavadora(double precio, string color, char consumo, int peso, int carga)
         {
             PrecioBase = precio;
             ColorElectrodomestico = color;

@@ -25,7 +25,7 @@ namespace TP2_Punto3_2
     }
     public abstract class Electrodomestico
     {
-        public decimal PrecioBase { get; set; }
+        public double PrecioBase { get; set; }
         public string ColorElectrodomestico { get; set; }
         public char Consumoenergetico { get; set; }
         public double Peso { get; set; }
@@ -76,11 +76,11 @@ namespace TP2_Punto3_2
             {
                 preciopeso = 50;
             }
-            else if (Peso >= 50 && Peso <= 79)
+            else if (Peso >= 50 && Peso <= 80)
             {
                 preciopeso = 80;
             }
-            else if (Peso >= 80)
+            else if (Peso > 80)
             {
                 preciopeso = 100;
             }

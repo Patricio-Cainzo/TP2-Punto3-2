@@ -17,7 +17,7 @@ namespace TP2_Punto3_2
         {
             Pulgadas = pulgadas;
         }
-        public Television(int precio, string color, char consumo, int peso, int pulgadas)
+        public Television(double precio, string color, char consumo, int peso, int pulgadas)
         {
             PrecioBase = precio;
             ColorElectrodomestico = color;
@@ -29,10 +29,15 @@ namespace TP2_Punto3_2
         public override double PrecioFinal()
         {
             double preciotele = base.PrecioFinal();
+            double preciodemercado = PrecioBase + preciotele;
             double precioadevolver = 0;
             if (Pulgadas > 40)
             {
-                precioadevolver = preciotele + (preciotele * 0.30);
+                precioadevolver = preciodemercado + (preciodemercado * 0.30);
+            }
+            else
+            {
+                precioadevolver= preciodemercado;
             }
 
             return precioadevolver;

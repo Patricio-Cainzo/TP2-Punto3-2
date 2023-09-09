@@ -40,7 +40,7 @@ namespace Prueba1
             double preciolavadora6 = lavadora6.PrecioFinal();
 
             //assert 
-
+            Assert.AreEqual(160, preciotele1);
 
 
 

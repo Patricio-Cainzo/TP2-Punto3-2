@@ -14,15 +14,7 @@ namespace TP2_Punto3_2
         Azul,
         Verde
     }
-    public enum Consumodeenergia
-    {
-        A,
-        B,
-        C,
-        D,
-        E,
-        F
-    }
+    
     public abstract class Electrodomestico
     {
         public double PrecioBase { get; set; }
@@ -32,8 +24,13 @@ namespace TP2_Punto3_2
 
         public bool Validarconsumoenergetico()
         {
-            return Enum.IsDefined(typeof(Consumodeenergia), Consumoenergetico);
+            if(Consumoenergetico == 'A'|| Consumoenergetico == 'B'||Consumoenergetico=='C'||Consumoenergetico=='D'||Consumoenergetico== 'E' || Consumoenergetico == 'F')
+            {
+                return true;
+            }
+            else { return false; }
         }
+
         public bool Validarcolor()
         {
             return Enum.IsDefined(typeof(Color), ColorElectrodomestico);

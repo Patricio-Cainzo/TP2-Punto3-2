@@ -29,13 +29,19 @@ namespace TP2_Punto3_2
         //Consultar por la herencia de metodos , no me esta resultando.
         public override double PrecioFinal()
         {
-            double precioBase = base.PrecioFinal();
+            double preciolava = base.PrecioFinal();
+            double preciodemercado = PrecioBase + preciolava;
             if (Carga > 30)
             {
-                precioBase += 50;
+                preciodemercado += 50;
+                return preciodemercado;
+            }
+            else
+            {
+                return preciodemercado;
             }
 
-            return precioBase;
+            
         }
     }
 }
